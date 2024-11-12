@@ -69,9 +69,11 @@ export default function Home() {
 
           <button
             onClick={handleUpload}
-            className="mt-4 rounded-full bg-blue-500 text-white py-2 px-6"
+            className={`mt-4 rounded-full py-2 px-6 ${
+              preview ? "bg-red-500 line-through" : "bg-blue-500"
+            } text-white`}
           >
-            Uploud Image
+            {preview ? "Upload Image" : "Upload Image"}
           </button>
         </div>
 
